@@ -1,0 +1,138 @@
+{
+  "schema": {
+    "transaction": {
+      "id": "string",
+      "status": "enum[initiated, in_transit, delivered, completed]",
+      "timestamp": "ISO8601",
+      "location": {
+        "latitude": "number",
+        "longitude": "number",
+        "address": "string"
+      }
+    },
+    "packing_slip": {
+      "items": [
+        {
+          "sku": "string",
+          "description": "string",
+          "quantity": "number",
+          "weight": "number",
+          "unit": "string"
+        }
+      ],
+      "total_weight": "number",
+      "weight_unit": "string"
+    },
+    "bol": {
+      "number": "string",
+      "date": "ISO8601",
+      "carrier_name": "string",
+      "carrier_id": "string"
+    },
+    "batch_details": {
+      "batch_id": "string",
+      "manufacture_date": "ISO8601",
+      "expiry_date": "ISO8601",
+      "lot_numbers": ["string"]
+    },
+    "commercial_invoice": {
+      "number": "string",
+      "date": "ISO8601",
+      "total_value": "number",
+      "currency": "string",
+      "terms": "string"
+    },
+    "logistics": {
+      "pallet_count": "number",
+      "transit_type": "enum[truck, ship, rail, air]",
+      "vehicle_id": "string",
+      "driver_id": "string"
+    },
+    "erp_identifiers": {
+      "shipper": {
+        "system": "string",
+        "company_id": "string",
+        "order_id": "string"
+      },
+      "receiver": {
+        "system": "string",
+        "company_id": "string",
+        "po_number": "string"
+      }
+    },
+    "security": {
+      "digital_signature": "string",
+      "signature_algorithm": "string",
+      "signature_timestamp": "ISO8601",
+      "public_key_id": "string"
+    }
+  },
+  "example": {
+    "transaction": {
+      "id": "TRX-2024-001234",
+      "status": "initiated",
+      "timestamp": "2024-01-15T10:30:00Z",
+      "location": {
+        "latitude": 40.1263,
+        "longitude": -82.9290,
+        "address": "123 Logistics Way, Westerville, OH 43081"
+      }
+    },
+    "packing_slip": {
+      "items": [
+        {
+          "sku": "PART-001",
+          "description": "Industrial Component A",
+          "quantity": 100,
+          "weight": 50.5,
+          "unit": "kg"
+        }
+      ],
+      "total_weight": 50.5,
+      "weight_unit": "kg"
+    },
+    "bol": {
+      "number": "BOL-2024-5678",
+      "date": "2024-01-15T10:00:00Z",
+      "carrier_name": "Express Logistics LLC",
+      "carrier_id": "CARR-OH-123"
+    },
+    "batch_details": {
+      "batch_id": "BATCH-2024-Q1-001",
+      "manufacture_date": "2024-01-01T00:00:00Z",
+      "expiry_date": "2025-01-01T00:00:00Z",
+      "lot_numbers": ["LOT-A123", "LOT-A124"]
+    },
+    "commercial_invoice": {
+      "number": "INV-2024-001234",
+      "date": "2024-01-15T09:00:00Z",
+      "total_value": 15000.00,
+      "currency": "USD",
+      "terms": "NET30"
+    },
+    "logistics": {
+      "pallet_count": 2,
+      "transit_type": "truck",
+      "vehicle_id": "TRUCK-OH-456",
+      "driver_id": "DRV-789"
+    },
+    "erp_identifiers": {
+      "shipper": {
+        "system": "Infor SyteLine",
+        "company_id": "SHIP-001",
+        "order_id": "SO-2024-1234"
+      },
+      "receiver": {
+        "system": "SAP",
+        "company_id": "REC-001",
+        "po_number": "PO-2024-5678"
+      }
+    },
+    "security": {
+      "digital_signature": "MEUCIQDxxx...",
+      "signature_algorithm": "ECDSA-SHA256",
+      "signature_timestamp": "2024-01-15T10:30:00Z",
+      "public_key_id": "KEY-SHIP-001"
+    }
+  }
+}
