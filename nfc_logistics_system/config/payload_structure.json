@@ -1,0 +1,156 @@
+{
+  "payload_schema": {
+    "transaction": {
+      "transaction_id": "string",
+      "status": "enum(initiated,in_transit,delivered,completed,failed)",
+      "timestamp": "ISO8601_datetime",
+      "location": {
+        "latitude": "float",
+        "longitude": "float",
+        "address": "string",
+        "city": "string",
+        "state": "string",
+        "zip_code": "string"
+      }
+    },
+    "packing_slip": {
+      "items": [
+        {
+          "item_id": "string",
+          "description": "string",
+          "quantity": "integer",
+          "unit_weight": "float",
+          "total_weight": "float",
+          "sku": "string",
+          "lot_number": "string"
+        }
+      ],
+      "total_weight": "float",
+      "total_items": "integer",
+      "pallet_count": "integer"
+    },
+    "bill_of_lading": {
+      "bol_number": "string",
+      "carrier_name": "string",
+      "carrier_id": "string",
+      "transit_type": "enum(truck,ship,rail,air)",
+      "origin": "string",
+      "destination": "string",
+      "pickup_date": "ISO8601_datetime",
+      "delivery_date": "ISO8601_datetime"
+    },
+    "batch_details": {
+      "batch_id": "string",
+      "manufacture_date": "ISO8601_date",
+      "expiry_date": "ISO8601_date",
+      "batch_size": "integer",
+      "quality_grade": "string"
+    },
+    "commercial_invoice": {
+      "invoice_number": "string",
+      "total_value": "float",
+      "currency": "string",
+      "payment_terms": "string",
+      "incoterms": "string",
+      "tax_amount": "float"
+    },
+    "erp_identifiers": {
+      "shipper_erp_id": "string",
+      "shipper_erp_type": "enum(infor_syteline,sap,oracle,other)",
+      "receiver_erp_id": "string",
+      "receiver_erp_type": "enum(infor_syteline,sap,oracle,other)",
+      "carrier_erp_id": "string"
+    },
+    "security": {
+      "digital_signature": "string",
+      "signature_algorithm": "string",
+      "signature_timestamp": "ISO8601_datetime",
+      "encryption_key_id": "string",
+      "checksum": "string"
+    },
+    "metadata": {
+      "version": "string",
+      "created_by": "string",
+      "last_modified": "ISO8601_datetime",
+      "priority": "enum(low,normal,high,urgent)",
+      "special_instructions": "string"
+    }
+  },
+  "example_payload": {
+    "transaction": {
+      "transaction_id": "TXN-2024-001-001",
+      "status": "initiated",
+      "timestamp": "2024-01-15T10:30:00Z",
+      "location": {
+        "latitude": 40.1264,
+        "longitude": -82.9291,
+        "address": "123 Logistics Way",
+        "city": "Westerville",
+        "state": "OH",
+        "zip_code": "43081"
+      }
+    },
+    "packing_slip": {
+      "items": [
+        {
+          "item_id": "ITEM-001",
+          "description": "Electronics Components",
+          "quantity": 100,
+          "unit_weight": 0.5,
+          "total_weight": 50.0,
+          "sku": "ELEC-COMP-001",
+          "lot_number": "LOT-2024-001"
+        }
+      ],
+      "total_weight": 50.0,
+      "total_items": 100,
+      "pallet_count": 2
+    },
+    "bill_of_lading": {
+      "bol_number": "BOL-2024-001",
+      "carrier_name": "Westerville Logistics",
+      "carrier_id": "CARRIER-001",
+      "transit_type": "truck",
+      "origin": "Westerville, OH",
+      "destination": "Columbus, OH",
+      "pickup_date": "2024-01-15T08:00:00Z",
+      "delivery_date": "2024-01-15T16:00:00Z"
+    },
+    "batch_details": {
+      "batch_id": "BATCH-2024-001",
+      "manufacture_date": "2024-01-10",
+      "expiry_date": "2025-01-10",
+      "batch_size": 100,
+      "quality_grade": "A"
+    },
+    "commercial_invoice": {
+      "invoice_number": "INV-2024-001",
+      "total_value": 5000.00,
+      "currency": "USD",
+      "payment_terms": "Net 30",
+      "incoterms": "FOB",
+      "tax_amount": 400.00
+    },
+    "erp_identifiers": {
+      "shipper_erp_id": "SHIPPER-001",
+      "shipper_erp_type": "infor_syteline",
+      "receiver_erp_id": "RECEIVER-001",
+      "receiver_erp_type": "sap",
+      "carrier_erp_id": "CARRIER-001"
+    },
+    "security": {
+      "digital_signature": "sha256_signature_hash_here",
+      "signature_algorithm": "SHA256withRSA",
+      "signature_timestamp": "2024-01-15T10:30:00Z",
+      "encryption_key_id": "KEY-2024-001",
+      "checksum": "md5_checksum_here"
+    },
+    "metadata": {
+      "version": "1.0",
+      "created_by": "shipper_system",
+      "last_modified": "2024-01-15T10:30:00Z",
+      "priority": "normal",
+      "special_instructions": "Handle with care - fragile electronics"
+    }
+  }
+}

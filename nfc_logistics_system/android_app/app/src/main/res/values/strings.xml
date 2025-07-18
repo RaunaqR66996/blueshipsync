@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NFC Logistics</string>
+    
+    <!-- Main Activity -->
+    <string name="app_title">NFC Logistics Carrier App</string>
+    <string name="system_status">System Status</string>
+    <string name="connections">Connections</string>
+    <string name="nfc_operations">NFC Operations</string>
+    <string name="payload_actions">Payload Actions</string>
+    <string name="current_payload">Current Payload</string>
+    <string name="instructions">Instructions</string>
+    
+    <!-- Buttons -->
+    <string name="connect_to_shipper">Connect to Shipper</string>
+    <string name="connect_to_receiver">Connect to Receiver</string>
+    <string name="read_nfc">Read NFC</string>
+    <string name="write_nfc">Write NFC</string>
+    <string name="save_to_wallet">Save to Wallet</string>
+    <string name="sync_payload">Sync Payload</string>
+    
+    <!-- Status Messages -->
+    <string name="nfc_checking">NFC: Checking...</string>
+    <string name="nfc_available">NFC: Available</string>
+    <string name="nfc_not_available">NFC: Not Available</string>
+    <string name="location_not_available">Location: Not available</string>
+    <string name="connections_ready">Connections: Ready</string>
+    <string name="status_ready">Status: Ready</string>
+    
+    <!-- Payload Display -->
+    <string name="transaction_none">Transaction: None</string>
+    <string name="bol_none">BOL: None</string>
+    <string name="status_none">Status: None</string>
+    <string name="items_zero">Items: 0</string>
+    <string name="weight_zero">Weight: 0 kg</string>
+    
+    <!-- Instructions Text -->
+    <string name="instructions_text">1. Connect to shipper and receiver systems\n2. Enable NFC reading or writing mode\n3. Tap NFC tag to read/write payload\n4. Save payload to Google Wallet\n5. Sync with bridge for real-time updates</string>
+    
+    <!-- Toast Messages -->
+    <string name="nfc_not_available_device">NFC is not available on this device</string>
+    <string name="enable_nfc">Please enable NFC</string>
+    <string name="location_permission_required">Location permission required</string>
+    <string name="connected_to_shipper">Connected to shipper</string>
+    <string name="connected_to_receiver">Connected to receiver</string>
+    <string name="connection_failed">Connection failed</string>
+    <string name="nfc_reading_enabled">NFC Reading enabled</string>
+    <string name="nfc_writing_enabled">NFC Writing enabled</string>
+    <string name="saved_to_wallet">Saved to Google Wallet</string>
+    <string name="failed_to_save_wallet">Failed to save to wallet</string>
+    <string name="payload_synced">Payload synced</string>
+    <string name="sync_failed">Sync failed</string>
+    <string name="no_payload_to_save">No payload to save</string>
+    <string name="no_payload_to_sync">No payload to sync</string>
+    <string name="payload_read">Payload read</string>
+    <string name="read_failed">Read failed</string>
+    <string name="payload_written">Payload written</string>
+    <string name="write_failed">Write failed</string>
+    <string name="no_payload_to_write">No payload to write</string>
+    <string name="nfc_tag_not_supported">NFC tag not supported</string>
+    
+    <!-- Error Messages -->
+    <string name="connection_error">Connection error</string>
+    <string name="wallet_save_error">Wallet save error</string>
+    <string name="sync_error">Sync error</string>
+    <string name="nfc_error">NFC error</string>
+    
+    <!-- Network Status -->
+    <string name="connecting_to_shipper">Connecting to shipper...</string>
+    <string name="connecting_to_receiver">Connecting to receiver...</string>
+    <string name="syncing_with_bridge">Syncing with bridge...</string>
+    <string name="saving_to_wallet">Saving to Google Wallet...</string>
+    <string name="payload_synced_successfully">Payload synced successfully</string>
+    <string name="failed_to_connect_shipper">Failed to connect to shipper</string>
+    <string name="failed_to_connect_receiver">Failed to connect to receiver</string>
+    <string name="failed_to_save_wallet">Failed to save to Google Wallet</string>
+    <string name="payload_read_successfully">Payload read successfully</string>
+    <string name="failed_to_read_payload">Failed to read payload</string>
+    <string name="payload_written_successfully">Payload written successfully</string>
+    <string name="failed_to_write_payload">Failed to write payload</string>
+    
+    <!-- NFC Status -->
+    <string name="nfc_reading_enabled_tap">NFC Reading enabled - Tap to read</string>
+    <string name="nfc_writing_enabled_tap">NFC Writing enabled - Tap to write</string>
+    
+    <!-- Permission Messages -->
+    <string name="permissions_required">The following permissions are required for this app to function properly:</string>
+    <string name="nfc_permission">NFC - Required for reading and writing NFC tags</string>
+    <string name="location_permission">Location - Required for tracking shipment location</string>
+    <string name="internet_permission">Internet - Required for network communication</string>
+    
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+    <string name="version">Version</string>
+    <string name="build_number">Build Number</string>
+    
+    <!-- About -->
+    <string name="about_app">NFC Logistics Carrier App</string>
+    <string name="about_description">A secure NFC-enabled logistics application for carriers to manage shipments and communicate with shipper and receiver systems.</string>
+    <string name="developed_by">Developed by Westerville Logistics</string>
+    <string name="copyright">© 2024 Westerville Logistics. All rights reserved.</string>
+</resources>
