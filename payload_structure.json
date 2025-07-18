@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Blue Ships Sync Payload",
+  "type": "object",
+  "properties": {
+    "transaction_id": {"type": "string"},
+    "status": {"type": "string", "enum": ["CREATED", "IN_TRANSIT", "DELIVERED"]},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "location": {"type": "string"},
+
+    "packing_slip": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "sku": {"type": "string"},
+              "description": {"type": "string"},
+              "qty": {"type": "integer", "minimum": 1},
+              "weight_kg": {"type": "number", "minimum": 0}
+            },
+            "required": ["sku", "description", "qty", "weight_kg"]
+          }
+        },
+        "total_weight_kg": {"type": "number", "minimum": 0}
+      },
+      "required": ["items", "total_weight_kg"]
+    },
+
+    "bol_number": {"type": "string"},
+
+    "batch_details": {
+      "type": "object",
+      "properties": {
+        "batch_id": {"type": "string"},
+        "manufacture_date": {"type": "string", "format": "date"},
+        "expiry_date": {"type": "string", "format": "date"}
+      },
+      "required": ["batch_id", "manufacture_date", "expiry_date"]
+    },
+
+    "commercial_invoice": {
+      "type": "object",
+      "properties": {
+        "number": {"type": "string"},
+        "total_value": {"type": "number", "minimum": 0},
+        "currency": {"type": "string", "pattern": "^[A-Z]{3}$"}
+      },
+      "required": ["number", "total_value", "currency"]
+    },
+
+    "pallet_count": {"type": "integer", "minimum": 0},
+    "transit_type": {"type": "string", "enum": ["truck", "ship", "rail"]},
+    "shipper_erp_id": {"type": "string"},
+    "receiver_erp_id": {"type": "string"},
+    "digital_signature": {"type": "string"}
+  },
+  "required": [
+    "transaction_id",
+    "status",
+    "timestamp",
+    "location",
+    "packing_slip",
+    "bol_number",
+    "batch_details",
+    "commercial_invoice",
+    "pallet_count",
+    "transit_type",
+    "shipper_erp_id",
+    "receiver_erp_id",
+    "digital_signature"
+  ]
+}
