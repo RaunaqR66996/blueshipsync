@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <include domain="sharedpref" path="."/>
+    <exclude domain="sharedpref" path="sensitive_data.xml"/>
+    <exclude domain="database" path="sensitive_database.db"/>
+</full-backup-content>

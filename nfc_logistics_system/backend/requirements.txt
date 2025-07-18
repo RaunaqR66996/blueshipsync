@@ -1,0 +1,67 @@
+# NFC Logistics System - Python Dependencies
+# Core dependencies for the shipper and receiver backend servers
+
+# Cryptography and security
+cryptography>=41.0.0
+pycryptodome>=3.19.0
+
+# Network and HTTP
+requests>=2.31.0
+aiohttp>=3.9.0
+websockets>=12.0
+
+# Async support
+asyncio-mqtt>=0.16.0
+
+# JSON handling
+jsonschema>=4.20.0
+
+# Logging and monitoring
+structlog>=23.2.0
+
+# Configuration management
+python-dotenv>=1.0.0
+configparser>=6.0.0
+
+# Data validation
+pydantic>=2.5.0
+marshmallow>=3.20.0
+
+# Database support (optional)
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-mock>=3.12.0
+
+# Development tools
+black>=23.0.0
+flake8>=6.1.0
+mypy>=1.7.0
+
+# Documentation
+sphinx>=7.2.0
+sphinx-rtd-theme>=1.3.0
+
+# Utilities
+python-dateutil>=2.8.0
+pytz>=2023.3
+uuid>=1.30
+
+# ERP Integration specific
+suds-jurko>=0.6
+zeep>=4.2.0
+
+# NFC and hardware integration (if needed)
+pyserial>=3.5
+pynfc>=0.1.0
+
+# Performance monitoring
+psutil>=5.9.0
+memory-profiler>=0.61.0
+
+# Security scanning
+bandit>=1.7.0
+safety>=2.3.0
